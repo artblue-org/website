@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="style.css" />
+
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon" sizes="16x16"
+        style="vertical-align: center;">
+    <link rel="icon" href="/img/favicon/favicon.ico" type="image/x-icon" sizes="16x16" style="vertical-align: center;">
+    <link rel="canonical" href="http://www.artblue.io/" style="vertical-align: center;">
+
+    <title>Artblue</title>
+
+
+</head>
+
+<body>
+    <div class="top">
+        <div class="top__inner">
+            <img id="main" src="/img/main-logo-gray.png" alt="ArtBlue" class="home-logo">
+
+            <article>
+                <span class="nav">
+                    <ul>
+                        <li>
+                            <a href="/main.html" name="home" title="Home">Home</a>
+                        </li>
+                        <li>
+                            <a href="/contact.html" name="contact" class="on" title="Contact">Contact</a>
+                        </li>
+                    </ul>
+                </span>
+            </article>
+        </div>
+    </div>
+
+    <div class="map-sector">
+        <div id="map"
+            style="width:70%; height:350px; border-radius: 0.3em; background-color: white; display: block; margin: auto;">
+        </div>
+
+        <script type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=face26c2a0f31fb6d61cd7a86fe5d001"></script>
+        <script>
+            var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+                mapOption = {
+                    center: new kakao.maps.LatLng(37.51706499999993, 127.05919499999955), // 지도의 중심좌표
+                    level: 3 // 지도의 확대 레벨
+                };
+
+            var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+            // 마커가 표시될 위치입니다
+            var markerPosition = new kakao.maps.LatLng(37.51706499999993, 127.05919499999955);
+
+            // 마커를 생성합니다
+            var marker = new kakao.maps.Marker({
+                position: markerPosition
+            });
+
+            // 마커가 지도 위에 표시되도록 설정합니다
+            marker.setMap(map);
+
+            // 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
+            var mapTypeControl = new kakao.maps.MapTypeControl();
+
+            // 지도에 컨트롤을 추가해야 지도위에 표시됩니다
+            // kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+            map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+            // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+            var zoomControl = new kakao.maps.ZoomControl();
+            map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+        </script>
+    </div>
+
+    <div class="info">
+        <p><strong>주소</strong>&nbsp;&nbsp;&nbsp;&nbsp;서울 강남구 삼성동 88
+            <br><br>
+        <p><strong>전화</strong>&nbsp;&nbsp;&nbsp;&nbsp;02 511 3100
+            <br><br>
+        <p>&nbsp;&nbsp;<strong>A</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;88, samsung-dong, Gangnam-gu, Seoul,
+            <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Republic of Korea
+            <br><br>
+        <p><strong>&nbsp;&nbsp;T</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+82 2 511 3100, Artblue
+            <br><br>
+        </p>
+    </div>
+
+    <div class="footer">
+        <p>Copyright © 2022 Artblue. All rights reserved.</p>
+    </div>
+
+
+
+
+</body>
+
+</html>

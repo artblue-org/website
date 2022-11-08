@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon" sizes="16x16"
+    style="vertical-align: center;">
+    <link rel="icon" href="/img/favicon/favicon.ico" type="image/x-icon" sizes="16x16" style="vertical-align: center;">
+    <link rel="canonical" href="http://www.artblue.io/" style="vertical-align: center;">
+    
+    <title>Artblue</title>
+
+    <style>
+        .top {
+            background-image: linear-gradient(to bottom, #ffffff, #ffffff, #cacaca, #989898, #686868, #3c3c3c);
+        }
+
+        hr.horizontal {
+            background-color: #dbdbdb;
+        }
+
+        .swiper {
+            width: 600px;
+            height: 300px;
+            margin-top: 80px;
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 810px) {
+            .swiper {
+                width: 90%;
+                margin-top: 16px;
+                margin-bottom: 16px;
+            }
+        }
+
+        @media (max-width: 390px) {
+            .swiper {
+                width: 95%;
+                margin-top: 8px;
+                margin-bottom: 8px;
+            }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: rgba(255, 255, 255, 0.2) !important;
+            /* fill: black !important; */
+            /* stroke: black !important; */
+        }
+
+        .swiper-pagination .swiper-pagination-bullet {
+            opacity: 0.2;
+            border: white solid 1px;
+            background-color: transparent;
+        }
+
+        .swiper-pagination .swiper-pagination-bullet-active {
+            opacity: 0.2;
+            background-color: white;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content__inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 900px;
+        }
+
+        .content p {
+            padding: 5px 0 5px 0;
+        }
+
+        .content__kor {
+            text-align: center;
+            line-height: 1;
+            padding: 50px 0 0px 0;
+        }
+
+        .content__goods {
+            width: 600px;
+            display: block;
+            margin: 20px auto 0px auto;
+            /* background-color: #989898; */
+        }
+
+        @media (max-width: 810px) {
+            .content {
+                margin: 0 16px 0 16px;
+            }
+
+            .content__goods {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 390px) {
+            .content {
+                margin: 0 8px 0 8px;
+            }
+
+            .content__goods {
+                width: 95%;
+            }
+        }
+
+        .content__eng {
+            text-align: center;
+            line-height: 1;
+            padding: 50px 0 0px 0;
+        }
+
+        .swiper-slide {
+            width: 600px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            speed: 2000,
+            autoHeight: true,
+            effect: 'fade',
+            hashNavigation: true,
+
+            autoplay: {
+                delay: 3000,
+                pauseOnMouseEnter: true,
+                disableOnInteraction: false,
+                waitForTransition: false,
+            },
+
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+
+    <div class="top">
+        <div class="top__inner">
+            <img id="main" src="/img/main-logo-gray.png" alt="ArtBlue" class="home-logo">
+
+            <article>
+                <span class="nav">
+                    <ul>
+                        <li>
+                            <a href="/main.html" name="home" class="on" title="Home">Home</a>
+                        </li>
+                        <li>
+                            <a href="/contact.html" name="contact" title="Contact">Contact</a>
+                        </li>
+                    </ul>
+                </span>
+            </article>
+        </div>
+
+        <hr class="horizontal" />
+
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="/img/cera00.png" width="100%"></div>
+                <div class="swiper-slide"><img src="/img/cera01.png" width="100%"></div>
+                <div class="swiper-slide"><img src="/img/cera02.png" width="100%"></div>
+                <div class="swiper-slide"><img src="/img/cera03.png" width="100%"></div>
+                <div class="swiper-slide"><img src="/img/cera04.png" width="100%"></div>
+                <div class="swiper-slide"><img src="/img/cera05.png" width="100%"></div>
+                <div class="swiper-slide"><img src="/img/cera06.png" width="100%"></div>
+                <div class="swiper-slide"><img src="/img/cera07.png" width="100%"></div>
+                <div class="swiper-slide"><img src="/img/cera08.png" width="100%"></div>
+                <div class="swiper-slide"><img src="/img/cera09.png" width="100%"></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content__inner">
+            <section class="content__kor">
+                <p>사람과 사람, 사회소통과 예술, 사람과 예술의 아름다운 장으로 만들어보고자
+                    2022년 인터넷에서 시작하고자 합니다.</p>
+                <p>현대미술과 고미술의 다양한 양식의 많은 작품들을 국내외에 소개하고 있으며 인터넷으로 작품을 소개하고 </p>
+                <p>옥션을 통해서 거래될 수 있도록 합니다.</p>
+                <p>근, 현대를 망라한 국내외 조각과 회화, 사진, 비디오 등 현대미술 초대, 기획전으로 한국 미술을 해외에 널리 알리고 </p>
+                <p>국제미술계의 첨병이 되어 작가와 미술을 사랑하는 사람들의 한마당, </p>
+                <p>Artblue가 되고자 합니다.</p>
+                <p>애호가들의 관심을 기원합니다.</p>
+            </section>
+
+            <section class="content__goods">
+                <img src="/img/cera-all.jpg" style="max-width: 100%; height: auto;">
+            </section>
+
+            <section class="content__eng">
+                <p>We want to start with the Internet in 2022 to make it a beautiful place of people and people,</p>
+                <p>communication and art, and people and art.</p>
+
+                <p>It introduces many works of various styles of modern art and ancient art at home and abroad, </p>
+                <p>and introduces works through the Internet and allows them to be traded through auctions.</p>
+
+                <p>It is an invitation and special exhibition of contemporary art, including domestic and foreign
+                    sculpture, </p>
+                <p>painting, photography, and video covering the modern and contemporary times.</p>
+
+                <p>We strive to promote Korean art abroad by inviting and special exhibitions of contemporary art,
+                    including domestic </p>
+                <p>and foreign sculpture, painting, photography, and video, covering both modern and modern times,
+                <p>and to become a forerunner in the international art world, to become a Artblue and a
+                    place for artists and art lovers.</p>
+
+                <p>We hope for the interest of fans.</p>
+            </section>
+            <br><br>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Copyright © 2022 Artblue. All rights reserved.</p>
+    </div>
+
+</body>
+
+</html>
